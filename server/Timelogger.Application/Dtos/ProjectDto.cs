@@ -7,9 +7,11 @@ namespace Timelogger.Application.Dtos
 
         public string Name { get; set; }
 
+        public  int UserId { get; set; }
+
         public int CustomerId { get; set; }
 
-        public DateTime Deadline { get; set; }
+        public DateOnly Deadline { get; set; }
 
         public enum OrderBy
         {

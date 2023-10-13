@@ -17,49 +17,49 @@ namespace Timelogger.Data.Configurations
             {
                 CustomerId = 1,
                 Name = "Project 1",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 1),
                 UserId = 1
             },
             new Project(2)
             {
                 CustomerId = 1,
                 Name = "Project 2",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 2),
                 UserId = 1
             },
             new Project(3)
             {
                 CustomerId = 2,
                 Name = "Project 3",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 3),
                 UserId = 1
             },
             new Project(4)
             {
                 CustomerId = 2,
                 Name = "Project 4",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 4),
                 UserId = 1
             },
             new Project(5)
             {
                 CustomerId = 3,
                 Name = "Project 5",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 5),
                 UserId = 1
             },
             new Project(6)
             {
                 CustomerId = 3,
                 Name = "Project 6",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 6),
                 UserId = 1
             },
             new Project(7)
             {
                 CustomerId = 4,
                 Name = "Unauthorized Project",
-                Deadline = new DateTime(2023, 12, 12),
+                Deadline = new DateOnly(2023, 12, 12),
                 UserId = 2
             },
         };

@@ -34,7 +34,7 @@ namespace Timelogger.WebApi.Controllers
         [HttpGet("{projectId}/timeRegistrations")]
         public IEnumerable<TimeRegistrationDto> GetTimeRegistrations(int projectId)
         {
-            return _timeRegistrationService.GetTimeRegistration(null, projectId);
+            return _timeRegistrationService.GetTimeRegistrations(null, projectId);
         }
 
     }

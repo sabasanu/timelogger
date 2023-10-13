@@ -18,7 +18,7 @@ namespace Timelogger.Application.Services
             _mapper = mapper;
         }
 
-        public List<TimeRegistrationDto> GetTimeRegistration(int? customerId, int? projectId)
+        public List<TimeRegistrationDto> GetTimeRegistrations(int? customerId, int? projectId)
         {
             return _timeloggerDbContext.TimeRegistrations
                 .Include(tr => tr.Project)

@@ -15,9 +15,9 @@ namespace Timelogger.Domain
 
         public required string Name { get; set; }
 
-        public DateTime Deadline { get; set; }
+        public DateOnly Deadline { get; set; }
 
-        public bool IsComplete => Deadline.Date < DateTime.Now.Date;
+        public bool IsComplete => DateOnly.FromDateTime(DateTime.Now) > Deadline;
 
         public int CustomerId { get; set; }
 

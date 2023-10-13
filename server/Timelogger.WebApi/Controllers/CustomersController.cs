@@ -27,7 +27,7 @@ namespace Timelogger.WebApi.Controllers
         [HttpGet("{customerId}/timeRegistrations")]
         public IEnumerable<TimeRegistrationDto> GetTimeRegistrations(int customerId)
         {
-            return _timeRegistrationService.GetTimeRegistration(customerId, null);
-        }
+            return _timeRegistrationService.GetTimeRegistrations(customerId, null);
+        }        
     }
 }

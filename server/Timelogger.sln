@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timelogger.WebApi", "Timelo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timelogger.Data", "Timelogger.Data\Timelogger.Data.csproj", "{D57ED5C5-9623-4B6E-84E5-612CEA589355}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D799CF95-A9AC-4CD9-8021-048FEEBD313E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timelogger.Domain", "Timelogger.Domain\Timelogger.Domain.csproj", "{4EBA7BEB-9104-4B65-BA02-D4A8262A2C52}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Timelogger.Application", "Timelogger.Application\Timelogger.Application.csproj", "{BA2D52F8-8D9A-4C53-B0C0-61A4E358D293}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timelogger.Common", "Timelogger.Common\Timelogger.Common.csproj", "{B5546A66-C774-4008-B72B-FAA88BA6A717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Timelogger.Tests", "Timelogger.Tests\Timelogger.Tests.csproj", "{DD1CDA5F-8A45-4ABF-A1CE-AFDEE5CFBA6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,12 +41,13 @@ Global
 		{B5546A66-C774-4008-B72B-FAA88BA6A717}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5546A66-C774-4008-B72B-FAA88BA6A717}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5546A66-C774-4008-B72B-FAA88BA6A717}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1CDA5F-8A45-4ABF-A1CE-AFDEE5CFBA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1CDA5F-8A45-4ABF-A1CE-AFDEE5CFBA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1CDA5F-8A45-4ABF-A1CE-AFDEE5CFBA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1CDA5F-8A45-4ABF-A1CE-AFDEE5CFBA6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{B5546A66-C774-4008-B72B-FAA88BA6A717} = {D799CF95-A9AC-4CD9-8021-048FEEBD313E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0E0D15AF-7B1F-43EE-BDCE-9AD2DAD63ACF}
