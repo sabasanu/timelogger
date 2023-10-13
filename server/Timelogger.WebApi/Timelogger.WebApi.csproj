@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Timelogger.Application\Timelogger.Application.csproj" />
+    <ProjectReference Include="..\Timelogger.Common\Timelogger.Common.csproj" />
+    <ProjectReference Include="..\Timelogger.Data\Timelogger.Data.csproj" />
+    <ProjectReference Include="..\Timelogger.Domain\Timelogger.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
