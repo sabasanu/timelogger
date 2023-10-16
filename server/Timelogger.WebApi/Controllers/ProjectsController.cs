@@ -20,9 +20,9 @@ namespace Timelogger.WebApi.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<ProjectDto> Get(int? customerId, ProjectDto.OrderBy? orderBy, SortDirection sortDirection = SortDirection.Ascending)
+        public IEnumerable<ProjectDto> Get(int? customerId, ProjectDto.OrderBy? orderBy, SortDirection dir = SortDirection.Ascending)
         {
-            return _projectsService.GetProjects(customerId, orderBy, sortDirection);
+            return _projectsService.GetProjects(customerId, orderBy, dir);
         }
 
         [HttpGet("{id}")]

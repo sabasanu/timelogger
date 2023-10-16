@@ -1,35 +1,49 @@
-import React from "react";
-import Table from "../components/Table";
+import React, { useEffect, useState } from "react";
+import * as projectsApi from "../api/projects.api";
+import { Project } from "../models/project.model";
+import { Sort } from "../models/sort.model";
+import { Table, TableHead, TableRow, TableCell, TableBody } from "@mui/material";
 
 export default function Projects() {
-    return (
-        <>
-            <div className="flex items-center my-6">
-                <div className="w-1/2">
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Add entry
-                    </button>
-                </div>
-
-                <div className="w-1/2 flex justify-end">
-                    <form>
-                        <input
-                            className="border rounded-full py-2 px-4"
-                            type="search"
-                            placeholder="Search"
-                            aria-label="Search"
-                        />
-                        <button
-                            className="bg-blue-500 hover:bg-blue-700 text-white rounded-full py-2 px-4 ml-2"
-                            type="submit"
-                        >
-                            Search
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-            <Table />
-        </>
-    );
+  const [sort, setSort] = useState<Sort | null>(null);
+  const [projects, setProjects] = useState<Project[]>([]);
+  useEffect(() => {
+    projectsApi.getAll(sort).then((p) => {
+      setProjects(p);
+    });
+  }, [sort]);
+  const deadlineSort = () => {
+    const dir = sort?.dir != "ascending" ? "ascending" : "descending";
+    setSort({ orderBy: "deadline", dir });
+  };
+  return (
+    <>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>#</TableCell>
+            <TableCell>Description</TableCell>
+            <TableCell>Date</TableCell>
+            <TableCell>
+              <a className="sortable" onClick={deadlineSort}>
+                Deadline
+              </a>
+            </TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {projects.map((row, index) => (
+            <TableRow key={row.name} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+              <TableCell>{index + 1}</TableCell>
+              <TableCell>
+                <a href={"/project/" + row.id}>{row.name}</a>
+              </TableCell>
+              <TableCell>{row.customerName}</TableCell>
+              <TableCell>{row.deadline}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </>
+  );
 }

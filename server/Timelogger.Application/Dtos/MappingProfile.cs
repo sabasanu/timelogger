@@ -7,8 +7,8 @@ namespace Timelogger.Application.Dtos
     {
         public MappingProfile()
         {
-            CreateMap<Project, ProjectDto>();
-            CreateMap<ProjectDto, Project>();
+            CreateMap<Project, ProjectDto>()
+                .ForMember(p => p.CustomerName, o => o.MapFrom((pr, dto)=> pr.Customer?.Name));
 
             CreateMap<Customer, CustomerDto>();
 

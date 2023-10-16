@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sortable {
+    cursor: pointer;
+}
+
+a {
+    color: blue;
+}
+a:hover {
+    text-decoration: underline;
+}

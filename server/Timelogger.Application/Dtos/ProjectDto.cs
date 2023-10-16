@@ -11,6 +11,8 @@ namespace Timelogger.Application.Dtos
 
         public int CustomerId { get; set; }
 
+        public string CustomerName { get; set; }
+
         public DateOnly Deadline { get; set; }
 
         public enum OrderBy
